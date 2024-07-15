@@ -1,9 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useForm } from "react-hook-form";
 import { FaLock } from "react-icons/fa";
-import { MdOutlineCallToAction } from "react-icons/md";
+import { MdOutlineCallToAction, MdOutlineCheckBox } from "react-icons/md";
 import logo from "../../assets/MAIN-3-IMAGE-2.png";
-import { RiRefund2Line } from "react-icons/ri";
 
 const Order = () => {
   const {
@@ -108,7 +107,8 @@ const Order = () => {
                     <hr />
                     <tbody className="">
                       <tr className="flex mt-3 items-center gap-4 font-semibold justify-between">
-                        <td className="text-[12px]">
+                        <td className="text-[12px] flex items-center gap-2">
+                          <MdOutlineCheckBox className="text-xl text-red-500" />
                           P106 | উদ্যোক্তা প্যাকেজ (#11272)
                         </td>
                         <td className="border flex items-center gap-3 cursor-pointer">
@@ -144,8 +144,23 @@ const Order = () => {
             <div className="flex text-sm font-semibold justify-between items-center gap-3 mt-5">
               <p>SubTotal</p>
               <div>
-                <p>390</p>
-                <p>ঢাকা সিটির বাহিরে: ৳ 120.00</p>
+                <p className="text-end">390 $</p>
+                <div className="flex items-center gap-2">
+                  <input
+                    className="accent-red-500"
+                    type="radio"
+                    name="b"
+                    id="background"
+                  />
+                  <p>ঢাকা সিটির বাহিরে: ৳ 120.00</p>
+                </div>
+              </div>
+            </div>
+            <div className="flex text-sm font-semibold justify-between items-center gap-3 mt-5">
+              <p>Shopping</p>
+              <div className="flex items-center gap-2">
+                <input className="accent-red-500" type="radio" name="" id="" />
+                <p>ঢাকা সিটির ভিতরে: ৳ 70.00</p>
               </div>
             </div>
             <p className="border-b-2 border-dashed mt-5 "></p>
